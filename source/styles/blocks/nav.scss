@@ -1,0 +1,19 @@
+.nav__list {
+  display: flex;
+  gap: 19px;
+
+}
+
+.nav__item {
+  a {
+    @include font($ff-inter, 500, 16px, 1.52);
+    color: $color-default-white;
+    padding: 4px;
+    display: block;
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+  }
+}

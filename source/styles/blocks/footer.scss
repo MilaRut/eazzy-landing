@@ -1,0 +1,79 @@
+.footer {
+  padding-top: 50px;
+  background: $color-black-russian;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.footer__info {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  align-items: flex-start;
+}
+
+.footer__info-text {
+  @include font($ff-inter, 400, 15px, 1.6);
+  color: $color-manatee;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-grow: 1;
+  max-width: 655px;
+}
+
+.footer__nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer__nav-title {
+  @include font($ff-inter, 500, 20px, 1.4);
+  color: $color-default-white;
+  margin-bottom: 15px;
+}
+
+.footer__link {
+  @include font($ff-inter, 400, 16px, 1.6);
+  color: $color-manatee;
+  letter-spacing: 0.05em;
+}
+
+a.footer__link {
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+}
+
+.footer__socials-list {
+  display: flex;
+  gap: 24px;
+  margin-top: 15px;
+}
+
+.footer__socials-item {
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+}
+
+.footer__copy {
+  @include font($ff-inter, 400, 14px, 1.6);
+  color: $color-manatee;
+  border-top: 1px solid $color-manatee;
+  padding: 30px 0;
+}

@@ -1,0 +1,30 @@
+.swiper-nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+
+  button {
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    border: 1px solid #80fff3;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color $trans-default;
+
+    @include hover-focus {
+      background-color: rgba(128, 255, 243, 0.1);
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+    }
+
+    &.swiper-button-prev {
+      svg {
+        scale: -1 1;
+      }
+    }
+  }
+}

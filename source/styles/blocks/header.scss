@@ -1,0 +1,30 @@
+.header {
+  background: $color-black-russian;
+  color: #ffffff;
+  padding: 20px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.header__link {
+  @include font($ff-inter, 500, 16px, 1.35);
+  color: $color-default-white;
+  box-shadow: inset 0 3px 4px 0 rgba(223, 229, 255, 0.3), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35), inset 0 -2px 2px 0 rgba(80, 70, 189, 0.6), 0 2px 3px 0 rgba(55, 52, 209, 0.21);
+  background: linear-gradient(180deg, #c5a9fe 0%, #5e13ff 100%);
+  border-radius: 12px;
+  padding: 13px 20px;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+}

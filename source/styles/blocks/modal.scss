@@ -1,0 +1,282 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  background-color: rgba($color-default-black, 0.7);
+  transform: scale(1.2);
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity $trans-modal, transform $trans-modal, visibility $trans-modal;
+
+  pointer-events: none;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 60px 40px;
+
+    // @include vp-767 {
+    //   padding: 20px 16px;
+    // }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    width: 628px;
+    background-color: $color-default-white;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 24px;
+
+    // @include vp-767 {
+    //   width: 100%;
+    //   padding: 20px;
+    // }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    z-index: 10;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.5;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      width: 18px;
+      height: 2px;
+      background: #1c1c1c;
+      border-radius: 50%;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__download {
+    position: absolute;
+    top: 11px;
+    right: 57px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+  }
+
+  &--responsive {
+    .modal__content {
+      width: 100%;
+    }
+  }
+
+  &--fit-content {
+    .modal__content {
+      width: auto;
+
+      // @include vp-767 {
+      //   width: 100%;
+      // }
+    }
+  }
+
+  &--no-scale {
+    transform: none;
+  }
+
+  &--preload {
+    transition: none;
+  }
+
+  &.is-active {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+
+    pointer-events: auto;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+}
+
+.modal-cases {
+  a {
+    color: rgba(28, 28, 28, 0.4);
+    transition: color $trans-default;
+
+    @include hover-focus {
+      color: rgba(28, 28, 28, 0.8);
+    }
+  }
+}
+
+.modal-cases__header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.modal-cases__name {
+  @include font($ff-inter, 600, 20px, 1.4);
+  color: #1c1c1c;
+}
+
+.modal-cases__more {
+  @include font($ff-inter, 400, 12px, 1.83);
+  letter-spacing: 0.01em;
+  color: rgba(28, 28, 28, 0.4);
+}
+
+.modal-cases__content {
+  ul {
+    margin: 0;
+    padding-left: 25px;
+    margin-bottom: 8px;
+  }
+
+  li {
+    @include font($ff-inter, 400, 14px, 1.6);
+    color: #1c1c1c;
+  }
+}
+
+.modal-cases__item-title {
+  @include font($ff-inter, 600, 16px, 1.4);
+  color: #5e13ff;
+  margin-bottom: 4px;
+}
+
+.modal-cases__item-text {
+  @include font($ff-inter, 400, 14px, 1.6);
+  color: #1c1c1c;
+  margin-bottom: 8px;
+
+  &:has(u) {
+    margin-bottom: 4px;
+    font-weight: 500;
+    text-underline-offset: 2px;
+    text-decoration-skip-ink: none;
+  }
+}
+
+.modal-reviews {
+  .modal__content {
+    padding: 50px 20px 20px;
+  }
+}
+
+.modal-reviews__content {
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.modal-success {
+  .modal__content {
+    border: 3px solid #008000;
+  }
+}
+
+.modal-error {
+  .modal__content {
+    border: 3px solid #ff0000;
+  }
+}
+
+.modal-success,
+.modal-error {
+  .modal__title {
+    @include font($ff-inter, 600, 20px, 1.4);
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .modal__text {
+    @include font($ff-inter, 400, 16px, 1.4);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &--small {
+      font-size: 14px;
+    }
+
+    a {
+      color: #5e13ff;
+      transition: opacity $trans-default;
+
+      @include hover-focus {
+        opacity: 0.7
+      }
+    }
+  }
+}
