@@ -1,0 +1,1 @@
+var e=new Map;function o(s,i,c){let r=new IntersectionObserver(n=>{n.forEach(t=>{t.isIntersecting&&(t.target.classList.add(i),t.target.classList.contains("bubbles")&&(c(),r.unobserve(s)))})});r.observe(s),e.set(s,r)}function b(s){e.has(s)&&(e.get(s).disconnect(),e.delete(s))}export{b as disconnectObserver,o as initObserver};

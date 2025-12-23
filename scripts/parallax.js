@@ -1,0 +1,1 @@
+function o(t){let l=document.querySelectorAll(".parallax img"),e=[.5,-.3,-1,.4,.3,-.8];function n(){for(let a=0;a<l.length;a++){let r=l[a];t.matches||(r.style.transform=`translateY(${e[a]*(window.scrollY/2)}px)`)}}document.addEventListener("scroll",n)}export{o as initParallax};

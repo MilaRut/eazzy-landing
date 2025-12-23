@@ -1,0 +1,1 @@
+var o=document.querySelector(".to-top-wrapper");function e(){o&&o.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})})}function n(){o&&window.addEventListener("scroll",()=>{let t=window.scrollY/1e3;window.scrollY<=1e3?o.style.opacity=t:o.style.opacity=1})}export{e as scrollToTop,n as showButton};
