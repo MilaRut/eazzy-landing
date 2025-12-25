@@ -1,6 +1,10 @@
 .scopes {
   background-color: $color-black-russian;
-  padding: 79px 0 100px;
+  padding: 60px 0;
+
+  @include vp-960 {
+    padding: 79px 0 100px;
+  }
 
   .container {
     display: flex;
@@ -14,6 +18,7 @@
   @include font($ff-inter, 600, 32px, 1.4);
   color: $color-default-white;
   letter-spacing: 0.015em;
+  text-align: center;
 
   span {
     font-family: $ff-atma;
@@ -22,10 +27,19 @@
 
 .scopes__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 24px;
   width: 100%;
   max-width: 1138px;
+
+  @include vp-640 {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  @include vp-960 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .scopes__item {
@@ -102,17 +116,5 @@
 
 .scopes__link {
   @include font($ff-inter, 500, 16px, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $color-black-russian;
-  text-transform: uppercase;
-  background-color: $color-default-white;
-  border-radius: 10px;
-  padding: 18px 25px;
-  transition: opacity $trans-default;
-
-  @include hover-focus {
-    opacity: 0.7;
-  }
+  width: 236px;
 }

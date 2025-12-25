@@ -2,7 +2,14 @@ import { initObserver, disconnectObserver } from './observer';
 const animationElem = document.querySelector('.bubbles');
 
 export function startBubblesAnimation() {
+  if (!animationElem) {
+    return;
+  }
   const bubbles = animationElem.querySelectorAll('.bubble');
+
+  if (bubbles.length === 0) {
+    return;
+  }
 
   let startPosition;
   try {
@@ -36,6 +43,7 @@ export function startBubblesAnimation() {
     el.style.transition = `transform ${duration}ms ${easing} ${delay}ms`;
     el.style.transform = 'translateY(0)';
   });
+
   disconnectObserver(animationElem);
 }
 

@@ -2,24 +2,40 @@
   background: linear-gradient(90deg, #f0efff 0%, #adacfa 100%);
 
   .container {
+    padding: 60px 16px;
     background-image:
       image-set(url("../../images/performers-bg@1x.webp") 1x type("image/webp"),
         url("../../images/performers-bg@2x.webp") 2x type("image/webp"),
         url("../../images/performers-bg@1x.png") 1x type("image/png"),
         url("../../images/performers-bg@2x.png") 2x type("image/png"));
+    background-size: 375px;
+    background-position: calc(50% - 20px) 140px;
     background-repeat: no-repeat;
-    background-position: 96.8% 100%;
-    padding-top: 60px;
-    padding-bottom: 65px;
-    padding-left: 90px;
+
+    @include vp-640 {
+      background-position: calc(100% - 20px) 100%;
+      background-size: 50vw;
+      padding-left: 40px;
+    }
+
+    @include vp-1200 {
+      padding: 60px 0 65px 90px;
+      background-size: 697px 611px;
+    }
   }
 }
 
 .performers__title {
   @include font($ff-inter, 600, 32px, 1.3);
-  margin-bottom: 24px;
   color: $color-black-russian;
   letter-spacing: 0.015em;
+  text-align: center;
+  margin-bottom: 370px;
+
+  @include vp-640 {
+    text-align: left;
+    margin-bottom: 24px;
+  }
 
   span {
     font-family: $ff-atma;
@@ -32,7 +48,10 @@
   flex-direction: column;
   gap: 12px;
   margin-bottom: 24px;
-  max-width: 407px;
+
+  @include vp-640 {
+    max-width: 407px;
+  }
 }
 
 .performers__item {
@@ -96,4 +115,9 @@
   width: 319px;
   height: 46px;
   letter-spacing: .04em;
+  margin: 0 auto;
+
+  @include vp-640 {
+    margin: 0;
+  }
 }

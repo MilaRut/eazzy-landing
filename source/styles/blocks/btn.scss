@@ -7,7 +7,7 @@
     width: fit-content;
     height: 50px;
     background: #5e13ff;
-    box-shadow: 0 6px 0 0 #4a0fca;
+    box-shadow: 0 6px 0 0 #4a0fca, 0 9px 9px 0 rgba(0, 0, 0, 0.25);
     border: none;
     border-radius: 10px;
     padding: 0;
@@ -16,11 +16,12 @@
     position: relative;
     padding: 2px;
     cursor: pointer;
-    transition: opacity $trans-default;
+    transition: transform $trans-default, box-shadow $trans-default;
 
     @include hover-focus {
       &:not(:disabled) {
-        opacity: 0.7;
+        transform: translateY(3px);
+        box-shadow: 0 3px 0 0 #4a0fca, 0 5px 5px 0 rgba(0, 0, 0, 0.25);
       }
     }
 
@@ -48,7 +49,13 @@
 
     &--bus {
       background: #008275;
-      box-shadow: 0 6px 0 0 #00655B;
+      box-shadow: 0 6px 0 0 #00655b, 0 9px 9px 0 rgba(0, 0, 0, 0.25);
+
+      @include hover-focus {
+        &:not(:disabled) {
+          box-shadow: 0 3px 0 0 #00655b, 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+        }
+      }
 
       &::before {
         background: linear-gradient(to bottom, #188e 82 0%, #008275 40%, #008275 70%, #339b90 100%);
@@ -61,7 +68,13 @@
 
     &--edu {
       background: #299bff;
-      box-shadow: 0 6px 0 0 #217ac9;
+      box-shadow: 0 6px 0 0 #217ac9, 0 9px 9px 0 rgba(0, 0, 0, 0.25);
+
+      @include hover-focus {
+        &:not(:disabled) {
+          box-shadow: 0 3px 0 0 #217ac9, 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+        }
+      }
 
       &::before {
         background: linear-gradient(to bottom, #3da4ff 82 0%, #299bff 40%, #299bff 70%, #54afff 100%);
@@ -69,6 +82,26 @@
 
       span {
         background: #299bff;
+      }
+    }
+
+    &--white {
+      background: $color-default-white;
+      box-shadow: 0 6px 0 0 #858585, 0 9px 9px 0 rgba(0, 0, 0, 0.25);
+
+      @include hover-focus {
+        &:not(:disabled) {
+          box-shadow: 0 3px 0 0 #858585, 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+        }
+      }
+
+      &::before {
+        background: linear-gradient(to bottom, #dfdfdf 82 0%, $color-default-white 40%, $color-default-white 70%, #a7a7a7 100%);
+      }
+
+      span {
+        background: $color-default-white;
+        color: $color-black-russian;
       }
     }
 
@@ -84,6 +117,5 @@
       span {
         background: #979797;
       }
-
     }
   }

@@ -1,5 +1,9 @@
 .static {
-  padding: 80px 0;
+  padding: 119px 0 40px;
+
+  @include vp-960 {
+    padding: 169px 0 80px;
+  }
 
   .container {
     max-width: 1000px;
@@ -7,30 +11,51 @@
 }
 
 .static__title {
-  @include font($ff-inter, 600, 42px, 1.2);
-  margin-bottom: 40px;
+  @include font($ff-inter, 600, 32px, 1.2);
+  margin-bottom: 30px;
   text-align: center;
+
+  @include vp-960 {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
 }
 
 .static__subtitle {
-  @include font($ff-inter, 600, 24px, 1.2);
+  @include font($ff-inter, 600, 20px, 1.2);
   margin-bottom: 30px;
+
+  @include vp-960 {
+    font-size: 24px;
+  }
 }
 
 .static__content {
   h2 {
-    @include font($ff-inter, 600, 24px, 1.4);
+    @include font($ff-inter, 600, 20px, 1.4);
     margin-bottom: 8px;
+
+    @include vp-960 {
+      font-size: 24px;
+    }
   }
 
   h3 {
-    @include font($ff-inter, 500, 22px, 1.4);
+    @include font($ff-inter, 500, 18px, 1.4);
     margin-bottom: 8px;
+
+    @include vp-960 {
+      font-size: 22px;
+    }
   }
 
   p {
-    @include font($ff-inter, 400, 20px, 1.4);
+    @include font($ff-inter, 400, 16px, 1.4);
     margin-bottom: 12px;
+
+    @include vp-960 {
+      font-size: 20px;
+    }
   }
 
   a {
@@ -52,49 +77,87 @@
 .static__table {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(28, 28, 28, 0.2);
+  gap: 16px;
+  border: none;
   border-radius: 20px;
   overflow: hidden;
   margin: 30px 0;
 
-  @media (max-width: 1000px) {
-    border: none;
-    gap: 16px;
+  @include vp-960 {
+    border: 1px solid rgba(28, 28, 28, 0.2);
+    gap: 0;
   }
 }
 
 .static__table-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid rgba(28, 28, 28, 0.2);
+  border-radius: 20px;
+
+  @include vp-960 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+  }
 
   &:not(:last-child) {
     border-bottom: 1px solid rgba(28, 28, 28, 0.2);
   }
 
-  @media (max-width: 1000px) {
-    grid-template-columns: 1fr;
-    border: 1px solid rgba(28, 28, 28, 0.2);
-    border-radius: 20px;
-  }
-
   p {
-    @include font($ff-inter, 400, 20px, 1.4);
+    @include font($ff-inter, 400, 16px, 1.4);
     margin-bottom: 0;
-    padding: 16px;
+    padding: 4px 10px;
+
+    @include vp-960 {
+      font-size: 20px;
+      padding: 16px;
+    }
 
     &.static__table-subtitle {
+      width: fit-content;
       font-weight: 700;
-      text-align: center;
+
+      @include vp-960 {
+        text-align: center;
+      }
+    }
+
+    &.static__table-title {
+      display: block;
+      width: 100%;
+      font-weight: 700;
+
+      &:first-child {
+        width: fit-content;
+      }
+
+      @include vp-960 {
+        display: none;
+      }
     }
   }
 
   ul {
-    padding: 16px;
+    padding: 4px 10px;
+
+    @include vp-960 {
+      padding: 16px;
+    }
   }
 
   li {
-    @include font($ff-inter, 400, 20px, 1.4);
+    @include font($ff-inter, 400, 16px, 1.4);
+
+    @include vp-960 {
+      font-size: 20px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -103,9 +166,11 @@
 }
 
 .static__table-head {
+  display: none;
 
-  @media (max-width: 1000px) {
-    display: none;
+  @include vp-960 {
+    display: grid;
+    background-color: rgba(94, 19, 255, 0.2);
   }
 
   p {
@@ -113,13 +178,4 @@
     text-align: center;
   }
 
-}
-
-.static__table-title {
-  display: none;
-
-  @media (max-width: 1000px) {
-    display: block;
-
-  }
 }

@@ -11,10 +11,10 @@ export const casesData = {
       <p class="modal-cases__item-title">Заказчик:</p>
       <p class="modal-cases__item-text">ООО «Эксподат», Санкт-Петербург</p>
 
-      <p class="modal-cases__item-title">Продукт заказчика:</p>
+      <p class="modal-cases__item-title">Сфера деятельности:</p>
       <p class="modal-cases__item-text">Программно-аппаратный комплекс для организаторов и участников оффлайн-мероприятий
       </p>
-      <p class="modal-cases__item-title">Задача EAZZY:</p>
+      <p class="modal-cases__item-title">Задача:</p>
       <p class="modal-cases__item-text">Сбор и онлайн-сопровождение команд молодых исполнителей для работы на офлайн-мероприятиях в разных регионах, прозрачный документооборот для всех вовлеченных сторон и своевременные выплаты исполнителям.</p>
       <p class="modal-cases__item-title">Как решали:</p>
       <p class="modal-cases__item-text">Платформа EAZZY выступила генеральным подрядчиком по работе с персоналом:</p>
@@ -55,7 +55,7 @@ export const casesData = {
       <p class="modal-cases__item-title">Заказчик:</p>
       <p class="modal-cases__item-text">ГК "Team Masters" (ООО "Акватерм"), Санкт-Петербург</p>
 
-      <p class="modal-cases__item-title">Продукт:</p>
+      <p class="modal-cases__item-title">Сфера деятельности:</p>
       <p class="modal-cases__item-text">Онлайн-ассистент дизайнера интерьера для управления жизненным циклом дизайн-проекта
       </p>
       <p class="modal-cases__item-title">Задача:</p>
@@ -111,7 +111,7 @@ export const casesData = {
     content: `
       <p class="modal-cases__item-title">Заказчик:</p>
       <p class="modal-cases__item-text">VIM Services ("ООО "Иммерсия СК")</p>
-      <p class="modal-cases__item-title">Продукт:</p>
+      <p class="modal-cases__item-title">Сфера деятельности:</p>
       <p class="modal-cases__item-text">Онлайн-инструмент для визуализации и планирования дизайна интерьеров с ИИ
         <a class="modal-cases__item-text" href="https://new.vimflat.ru/"><b>new.vimflat.ru</b></a>
       </p>
@@ -156,7 +156,7 @@ export const casesData = {
       <p class="modal-cases__item-title">Заказчик:</p>
       <p class="modal-cases__item-text">VIM Services ("ООО "Иммерсия СК")</p>
 
-      <p class="modal-cases__item-title">Продукт:</p>
+      <p class="modal-cases__item-title">Сфера деятельности:</p>
       <p class="modal-cases__item-text">Онлайн-инструмент для визуализации и дорендеринга интерьеров с ИИ</p>
 
       <p class="modal-cases__item-title">Задача:</p>
@@ -197,7 +197,7 @@ export const casesData = {
       <p class="modal-cases__item-title">Заказчик:</p>
       <p class="modal-cases__item-text">Финансовый директор на аутсорсинге Лазунина Н.В.</p>
 
-      <p class="modal-cases__item-title">Продукт:</p>
+      <p class="modal-cases__item-title">Сфера деятельности:</p>
       <p class="modal-cases__item-text">Услуги финансового директора и антикризисного менеджера</p>
 
       <p class="modal-cases__item-title">Задача:</p>

@@ -10,9 +10,14 @@
 }
 
 .contact__title {
-  @include font($ff-inter, 500, 40px, 1.4);
+  @include font($ff-inter, 500, 32px, 1.4);
   color: $color-default-white;
   margin-bottom: 20px;
+  text-align: center;
+
+  @include vp-960 {
+    font-size: 40px;
+  }
 }
 
 .contact__text {
@@ -36,21 +41,31 @@
     padding: 0;
     border: none;
     display: flex;
-    justify-content: center;
-    gap: 18px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
     margin-bottom: 32px;
+
+    @include vp-960 {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 18px;
+    }
   }
 
   label {
     display: block;
-    position: relative;
     width: 100%;
+    max-width: 321px;
+    position: relative;
+
+    @include vp-960 {}
   }
 
   input {
     @include font($ff-inter, 400, 16px, 1.4);
     width: 100%;
-    max-width: 321px;
     height: 56px;
     background: $color-default-white;
     border: none;
@@ -69,7 +84,12 @@
   }
 
   button {
-    min-width: 126px;
+    width: 100%;
+    max-width: 321px;
+
+    @include vp-960 {
+      max-width: 126px;
+    }
 
     &.loading {
       pointer-events: none;
@@ -88,6 +108,7 @@
     position: relative;
     display: block;
     width: fit-content;
+    max-width: 100%;
     margin: 0 auto;
     cursor: pointer;
 
@@ -100,13 +121,17 @@
     &::before {
       position: absolute;
       content: "";
-      top: 50%;
+      top: 12px;
       left: 5px;
       translate: 0 -50%;
       width: 14px;
       height: 14px;
       border-radius: 3px;
       border: 2px solid $color-default-white;
+
+      @include vp-960 {
+        top: 50%;
+      }
     }
 
     &:has(input:checked)::before {

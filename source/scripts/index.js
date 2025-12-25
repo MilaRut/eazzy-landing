@@ -1,24 +1,29 @@
-import { initModal } from './modal';
-import { checkCookies } from './cookies';
-import { initSwiperCases, initSwiperReviews } from './my-swiper';
+import { setHeaderOnScroll } from './header';
 import { initParallax } from './parallax';
-import { initBubblesAnimation } from './bubbles';
+import { showDropdownList } from './dropdown';
+import { checkCookies } from './cookies';
 import { scrollToTop, showButton } from './top-btn';
-import { initFormValidation } from './form';
+import { initCounters } from './counters';
+import { initSwipers } from './my-swiper';
+import { initBubblesAnimation } from './bubbles';
 import { copyEmail } from './copy';
+import { initFormValidation } from './form';
+import { initModal } from './modal';
 
 const mediaQueriesMob = window.matchMedia('(max-width: 1023px)');
 
 window.addEventListener('DOMContentLoaded', () => {
-  initModal();
-  checkCookies();
-  initSwiperCases();
-  initSwiperReviews();
+  setHeaderOnScroll();
   mediaQueriesMob.addEventListener('change', initParallax);
   initParallax(mediaQueriesMob);
-  initBubblesAnimation();
+  showDropdownList();
+  checkCookies();
   scrollToTop();
   showButton();
-  initFormValidation();
+  initCounters();
+  initSwipers();
+  initBubblesAnimation();
   copyEmail();
+  initFormValidation();
+  initModal();
 });

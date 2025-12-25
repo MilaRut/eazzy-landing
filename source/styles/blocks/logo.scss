@@ -1,6 +1,11 @@
 .logo {
-  min-width: 65px;
-  height: 49px;
+  min-width: 41px;
+  height: 36px;
+
+  @include vp-640 {
+    min-width: 65px;
+    height: 49px;
+  }
 
   img {
     width: 100%;

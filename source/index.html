@@ -19,7 +19,7 @@
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/styles.css?v=0.2">
 
   <link rel="preload" href="./fonts/Inter-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Inter-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -31,12 +31,28 @@
   <link rel="preload" href="./fonts/Inter-SemiBold.woff" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Inter-Bold.woff" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Atma-SemiBold.woff" type="font/woff" as="font" crossorigin="anonymous">
-  <script src="scripts/index.js" defer></script>
+  <script src="scripts/index.js?v=0.2" defer></script>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(101257206, 'init', { webvisor: true, clickmap: true, accurateTrackBounce: true, trackLinks: true });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/101257206" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header header--default">
       <div class="container">
         <div class="header__logo logo">
           <a href="/">
@@ -46,31 +62,35 @@
             </picture>
           </a>
         </div>
-        <nav class="header__nav nav">
+        <nav class="header__nav nav" id="header-nav">
           <ul class="nav__list list-reset">
             <li class="nav__item">
-              <a href="/#about">Что умеем</a>
+              <a href="/#scopes">Что умеем</a>
             </li>
             <li class="nav__item">
               <a href="/#business">Бизнесу</a>
             </li>
             <li class="nav__item">
-              <a href="#performers">Исполнителю</a>
+              <a href="/#performers">Исполнителю</a>
             </li>
             <li class="nav__item">
-              <a href="#cases">Кейсы</a>
+              <a href="/#cases">Кейсы</a>
             </li>
             <li class="nav__item">
-              <a href="/parents.html">Родителям</a>
+              <a href="/parents.html" target="_blank">Родителям</a>
             </li>
             <li class="nav__item">
-              <a href="/education.html">Образованию</a>
+              <a href="/education.html" target="_blank">Образованию</a>
             </li>
             <li class="nav__item">
-              <a href="#contact">Связаться</a>
+              <a href="/#contact">Связаться</a>
             </li>
           </ul>
+          <a class="nav__link header__link" href="https://new.eazzy.pro/" target="_blank">Войти</a>
         </nav>
+        <button class="header__burger js-dropdown-trigger" data-id="#header-nav">
+          <span></span>
+        </button>
         <a class="header__link" href="https://new.eazzy.pro/" target="_blank">Войти</a>
       </div>
 
@@ -81,7 +101,7 @@
           <h1 class="hero__pretitle">Платформа развития молодёжной карьеры</h1>
           <p class="hero__title">Найди подработку или исполнителя</p>
           <p class="hero__title">Задачи решаются на <span>eazzy</span></p>
-          <p class="hero__subtitle">Запуск молодежной карьеры ( 14-22 г)</p>
+          <p class="hero__subtitle">Запуск молодежной карьеры ( 14-25 л)</p>
           <p class="hero__subtitle">Smart-решение для бизнеса</p>
           <a class="hero__link" href="https://new.eazzy.pro/" target="_blank">Зарегистрироваться</a>
           <p class="hero__contacts">Узнайте больше о нас:</p>
@@ -107,7 +127,7 @@
 
       <section class="about" id="about">
         <div class="container">
-          <h2 class="about__title">Платформа <span>eazzy</span> это возможности для:</h2>
+          <h2 class="about__title">Платформа <span>eazzy</span> &mdash; это возможности для:</h2>
           <ul class="about__list list-reset">
             <li class="about__item about__item--business">
               <h3 class="about__item-title">Для бизнеса</h3>
@@ -145,19 +165,19 @@
           <h2 class="visually-hidden">Наша статистика</h2>
           <ul class="stats__list list-reset">
             <li class="stats__item">
-              <p class="stats__number">1500+</p>
+              <p class="stats__number"><span data-n="150">0</span>+</p>
               <p class="stats__text">Исполнителей</p>
             </li>
             <li class="stats__item">
-              <p class="stats__number">10+</p>
+              <p class="stats__number"><span data-n="5">0</span>+</p>
               <p class="stats__text">Регионов</p>
             </li>
             <li class="stats__item">
-              <p class="stats__number">200+</p>
+              <p class="stats__number"><span data-n="20">0</span>+</p>
               <p class="stats__text">Заказчиков</p>
             </li>
             <li class="stats__item">
-              <p class="stats__number">8к+</p>
+              <p class="stats__number"><span data-n="50">0</span>+</p>
               <p class="stats__text">Выполненных задач</p>
             </li>
           </ul>
@@ -214,66 +234,68 @@
         </div>
       </section>
 
-      <section class="scopes">
+      <section class="scopes" id="scopes">
         <div class="container">
-          <h2 class="scopes__title">Что делегируют подросткам и молодёжи на <span>EAZZY</span></h2>
+          <h2 class="scopes__title">Что делегируют подросткам и&nbsp;молодёжи на&nbsp;<span>EAZZY</span></h2>
           <ul class="scopes__list list-reset">
             <li class="scopes__item">
               <h3 class="scopes__item-title">Контент и SMM</h3>
               <ul class="scopes__sublist list-reset">
-                <li class="scopes__subitem">&#8226;&nbsp;Подготовка и оформление постов</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Подготовка и публикация постов</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Ведение и модерация соцсетей</li>
                 <li class="scopes__subitem">&#8226;&nbsp;Заполнение карточек товаров</li>
                 <li class="scopes__subitem">&#8226;&nbsp;Оформление страниц и аккаунтов</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Модерация сообществ</li>
               </ul>
             </li>
             <li class="scopes__item">
               <h3 class="scopes__item-title">Дизайн и креатив</h3>
               <ul class="scopes__sublist list-reset">
-                <li class="scopes__subitem">&#8226;&nbsp;Подготовка и оформление постов</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Заполнение карточек товаров</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Оформление страниц и аккаунтов</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Модерация сообществ</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Баннеры, визуалы, обложки</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Презентации и инфографика</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Обработка изображений</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Видео и короткий моушен</li>
               </ul>
             </li>
             <li class="scopes__item">
               <h3 class="scopes__item-title">Простые IT-задачи</h3>
               <ul class="scopes__sublist list-reset">
-                <li class="scopes__subitem">&#8226;&nbsp;Подготовка и оформление постов</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Заполнение карточек товаров</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Оформление страниц и аккаунтов</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Модерация сообществ</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Тестирование сайтов и сервисов</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Ввод и проверка данных</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Настройка форм и чат-ботов</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Датасеты для ИИ и автоматизации</li>
               </ul>
             </li>
             <li class="scopes__item">
               <h3 class="scopes__item-title">Аналитика и ресерч</h3>
               <ul class="scopes__sublist list-reset">
-                <li class="scopes__subitem">&#8226;&nbsp;Подготовка и оформление постов</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Заполнение карточек товаров</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Оформление страниц и аккаунтов</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Модерация сообществ</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Сбор и структурирование данных</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Работа с таблицами и базами</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Анализ рынка и конкурентов</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Опросы и базовая аналитика</li>
               </ul>
             </li>
             <li class="scopes__item">
               <h3 class="scopes__item-title">Работа с документами</h3>
               <ul class="scopes__sublist list-reset">
-                <li class="scopes__subitem">&#8226;&nbsp;Подготовка и оформление постов</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Заполнение карточек товаров</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Оформление страниц и аккаунтов</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Модерация сообществ</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Таблицы и CRM</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Подготовка отчетов</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Рерайтинг и тексты по шаблону</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Организация и проверка данных</li>
               </ul>
             </li>
             <li class="scopes__item">
               <h3 class="scopes__item-title">Оффлайн-задачи</h3>
               <ul class="scopes__sublist list-reset">
-                <li class="scopes__subitem">&#8226;&nbsp;Подготовка и оформление постов</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Заполнение карточек товаров</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Оформление страниц и аккаунтов</li>
-                <li class="scopes__subitem">&#8226;&nbsp;Модерация сообществ</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Поддержка мероприятий</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Упаковка и сортировка продукции</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Фото/видео-сопровождение</li>
+                <li class="scopes__subitem">&#8226;&nbsp;Сбор обратной связи</li>
               </ul>
             </li>
           </ul>
-          <a class="scopes__link" href="tel:+79955925720" target="_blank">запросить условия</a>
+          <a class="scopes__link btn btn--white" href="tel:+79955925720" target="_blank">
+            <span>запросить условия</span>
+          </a>
         </div>
       </section>
 
@@ -319,14 +341,14 @@
                 <img src="./images/edu-1.svg" width="36" height="36" alt="">
               </div>
               <h3 class="edu__item-title">Процессы</h3>
-              <p class="edu__item-text">Автоматизация документооборота, аналитики, платежей и т.д.</p>
+              <p class="edu__item-text">Автоматизация документооборота, аналитики, платежей&nbsp;и т.д.</p>
             </li>
             <li class="edu__item">
               <div class="edu__icon">
                 <img src="./images/edu-2.svg" width="36" height="36" alt="">
               </div>
               <h3 class="edu__item-title">Студ Портфолио</h3>
-              <p class="edu__item-text">Формирование практико- ориентированного цифрового портфолио студента</p>
+              <p class="edu__item-text">Формирование практико-ориентированного цифрового портфолио студента</p>
             </li>
             <li class="edu__item">
               <div class="edu__icon">
@@ -340,13 +362,15 @@
                 <img src="./images/edu-4.svg" width="36" height="36" alt="">
               </div>
               <h3 class="edu__item-title">Практика+</h3>
-              <p class="edu__item-text">Инструмент для организации практики и проектной занятости&nbsp;студентов</p>
+              <p class="edu__item-text">Инструмент для&nbsp;организации практики и&nbsp;проектной
+                занятости&nbsp;студентов</p>
             </li>
           </ul>
           <div class="edu__cta">
-            <p class="edu__cta-title">Хотите напрямую связать теорию с практикой?</p>
-            <p class="edu__cta-text">Подключите единый цифровой контур для сопровождения
-              практико-ориентированного обучения студентов на реальных задачах по&nbsp;профильным специальностям</p>
+            <p class="edu__cta-title">Хотите напрямую связать теорию с&nbsp;практикой?</p>
+            <p class="edu__cta-text">Подключите единый цифровой контур для&nbsp;сопровождения
+              практико-ориентированного обучения студентов на&nbsp;реальных задачах по&nbsp;профильным специальностям
+            </p>
             <a class="edu__link btn btn--edu" href="https://new.eazzy.pro" target="_blank">
               <span>зарегистрироваться на EAZZY</span>
             </a>
@@ -360,56 +384,61 @@
           <p class="process__subtitle">Мы подбираем исполнителя, контролируем выполнение и обеспечиваем качество.
             <br>Всё — без лишних рисков и рутины.
           </p>
-          <ul class="process__list list-reset">
-            <li class="process__item">
-              <h3 class="process__item-title">
-                <span class="process__item-count">01</span>
-                <span>Регистрация на платформе</span>
-              </h3>
-              <p class="process__item-text">Личный кабинет для пользователя. Функционал администрирования -
-                образовательному партнеру</p>
-            </li>
-            <li class="process__item">
-              <h3 class="process__item-title">
-                <span class="process__item-count">04</span>
-                <span>Сопровождение и качество</span>
-              </h3>
-              <p class="process__item-text">После модерации задания на платформе исполнители выполняют его в
-                сопровождении куратора</p>
-            </li>
-            <li class="process__item">
-              <h3 class="process__item-title">
-                <span class="process__item-count">02</span>
-                <span>Задания</span>
-              </h3>
-              <p class="process__item-text">Бизнес-заказчик размещает задание на платформе: краткий бриф с требованиями,
-                сроками и бюджетом</p>
-            </li>
-            <li class="process__item">
-              <h3 class="process__item-title">
-                <span class="process__item-count">05</span>
-                <span>Результат "под ключ"</span>
-              </h3>
-              <p class="process__item-text">Бизнес-заказчик принимает готовый результат или по необходимости запрашивает
-                доработки</p>
-            </li>
-            <li class="process__item">
-              <h3 class="process__item-title">
-                <span class="process__item-count">03</span>
-                <span>Назначение исполнителя</span>
-              </h3>
-              <p class="process__item-text">Автоматизированный подбор исполнителей на EAZZY (по навыкам, локации, образ.
-                организацию)</p>
-            </li>
-            <li class="process__item">
-              <h3 class="process__item-title">
-                <span class="process__item-count">06</span>
-                <span>Завершение задания</span>
-              </h3>
-              <p class="process__item-text">Проведение оплаты и завершение документооборота Отчет и аналитика для
-                образовательного партнера</p>
-            </li>
-          </ul>
+          <div class="process__content">
+            <ul class="process__list list-reset">
+              <li class="process__item">
+                <h3 class="process__item-title">
+                  <span class="process__item-count">01</span>
+                  <span>Регистрация на платформе</span>
+                </h3>
+                <p class="process__item-text">Личный кабинет для пользователя. Функционал администрирования -
+                  образовательному партнеру</p>
+              </li>
+              <li class="process__item">
+                <h3 class="process__item-title">
+                  <span class="process__item-count">02</span>
+                  <span>Задания</span>
+                </h3>
+                <p class="process__item-text">Бизнес-заказчик размещает задание на платформе: краткий бриф с
+                  требованиями, сроками и бюджетом</p>
+              </li>
+              <li class="process__item">
+                <h3 class="process__item-title">
+                  <span class="process__item-count">03</span>
+                  <span>Назначение исполнителя</span>
+                </h3>
+                <p class="process__item-text">Автоматизированный подбор исполнителей на EAZZY (по навыкам, локации,
+                  образ. организацию)</p>
+              </li>
+            </ul>
+            <ul class="process__list list-reset">
+              <li class="process__item">
+                <h3 class="process__item-title">
+                  <span class="process__item-count">04</span>
+                  <span>Сопровождение и качество</span>
+                </h3>
+                <p class="process__item-text">После модерации задания на платформе исполнители выполняют его в
+                  сопровождении куратора</p>
+              </li>
+              <li class="process__item">
+                <h3 class="process__item-title">
+                  <span class="process__item-count">05</span>
+                  <span>Результат "под ключ"</span>
+                </h3>
+                <p class="process__item-text">Бизнес-заказчик принимает готовый результат или по необходимости
+                  запрашивает
+                  доработки</p>
+              </li>
+              <li class="process__item">
+                <h3 class="process__item-title">
+                  <span class="process__item-count">06</span>
+                  <span>Завершение задания</span>
+                </h3>
+                <p class="process__item-text">Проведение оплаты и завершение документооборота Отчет и аналитика для
+                  образовательного партнера</p>
+              </li>
+            </ul>
+          </div>
           <a class="process__link btn" href="https://new.eazzy.pro" target="_blank">
             <span>зарегистрироваться на EAZZY</span>
           </a>
@@ -459,7 +488,7 @@
                 <div class="cases__content">
                   <p class="cases__item-title">Заказчик</p>
                   <p class="cases__item-text">ООО «Эксподат», Санкт-Петербург</p>
-                  <p class="cases__item-title">Продукт заказчика</p>
+                  <p class="cases__item-title">Сфера деятельности</p>
                   <p class="cases__item-text">Программно-аппаратный комплекс для организаторов и участников
                     оффлайн-мероприятий</p>
                   <div class="cases__button-wrapper">
@@ -488,7 +517,7 @@
                 <div class="cases__content">
                   <p class="cases__item-title">Заказчик</p>
                   <p class="cases__item-text">ГК "Team Masters" (ООО "Акватерм"), Санкт-Петербург</p>
-                  <p class="cases__item-title">Продукт</p>
+                  <p class="cases__item-title">Сфера деятельности</p>
                   <p class="cases__item-text">Онлайн-ассистент дизайнера интерьера для управления жизненным циклом
                     дизайн-проекта</p>
                   <div class="cases__button-wrapper">
@@ -516,7 +545,7 @@
                 <div class="cases__content">
                   <p class="cases__item-title">Заказчик</p>
                   <p class="cases__item-text">VIM Services ("ООО "Иммерсия СК")</p>
-                  <p class="cases__item-title">Продукт</p>
+                  <p class="cases__item-title">Сфера деятельности</p>
                   <p class="cases__item-text">Онлайн-инструмент для визуализации и планирования дизайна интерьеров с
                     ИИ
                   </p>
@@ -545,7 +574,7 @@
                 <div class="cases__content">
                   <p class="cases__item-title">Заказчик</p>
                   <p class="cases__item-text">VIM Services ("ООО "Иммерсия СК")</p>
-                  <p class="cases__item-title">Продукт</p>
+                  <p class="cases__item-title">Сфера деятельности</p>
                   <p class="cases__item-text">Онлайн-инструмент для визуализации и дорендеринга интерьеров с ИИ</p>
                   <div class="cases__button-wrapper">
                     <button class="cases__item-btn" data-open-modal data-modal-id="#modal-cases" data-case="4">Весь
@@ -572,7 +601,7 @@
                 <div class="cases__content">
                   <p class="cases__item-title">Заказчик</p>
                   <p class="cases__item-text">Финансовый директор на аутсорсинге Лазунина Н.В.</p>
-                  <p class="cases__item-title">Продукт</p>
+                  <p class="cases__item-title">Сфера деятельности</p>
                   <p class="cases__item-text">Услуги финансового директора и антикризисного менеджера</p>
                   <div class="cases__button-wrapper">
                     <button class="cases__item-btn" data-open-modal data-modal-id="#modal-cases" data-case="5">Весь
@@ -607,7 +636,7 @@
             </picture>
           </div>
           <div class="founder__content">
-            <h2 class="founder__title">Ирина Решетникова<span class="sub">фаундер&nbsp;EAZZY</span></h2>
+            <h2 class="founder__title"><span>Ирина Решетникова</span><span class="sub">фаундер&nbsp;EAZZY</span></h2>
             <p class="founder__subtitle">Бэкграунд: СРО, фаундер НКО, дизайнер</p>
             <div class="founder__info">
               <p class="founder__text">Работая в ритейле, финтехе, стартапах и "третьем секторе":</p>
@@ -646,63 +675,17 @@
             <ul class="reviews__list list-reset swiper-wrapper">
               <li class="reviews__item swiper-slide" data-open-modal data-modal-id="#modal-reviews">
                 <div class="reviews__image">
-                  <img src="./images/slide1.png" data-src="./images/slide-1-full.png" width="210" height="297" alt="">
+                  <img src="./images/review-1.png" data-src="./images/review-1-full.png" width="210" height="297"
+                    alt="">
                 </div>
-                <p class="reviews__name">ООО «ТехноСфера»</p>
+                <p class="reviews__name">ООО Эксподат</p>
               </li>
               <li class="reviews__item swiper-slide" data-open-modal data-modal-id="#modal-reviews">
                 <div class="reviews__image">
-                  <img src="./images/slide2.png" data-src="./images/slide-2-full.png" width="210" height="297" alt="">
+                  <img src="./images/review-2.png" data-src="./images/review-2-full.png" width="210" height="297"
+                    alt="">
                 </div>
-                <p class="reviews__name">ООО «ТехноСфера»</p>
-              </li>
-              <li class="reviews__item swiper-slide" data-open-modal data-modal-id="#modal-reviews">
-                <div class="reviews__image">
-                  <img src="./images/slide1.png" data-src="./images/slide-1-full.png" width="210" height="297" alt="">
-                </div>
-                <p class="reviews__name">ООО «ТехноСфера»</p>
-              </li>
-              <li class="reviews__item swiper-slide" data-open-modal data-modal-id="#modal-reviews">
-                <div class="reviews__image">
-                  <img src="./images/slide2.png" data-src="./images/slide-2-full.png" width="210" height="297" alt="">
-                </div>
-                <p class="reviews__name">ООО «ТехноСфера»</p>
-              </li>
-              <li class="reviews__item swiper-slide" data-open-modal data-modal-id="#modal-reviews">
-                <div class="reviews__image">
-                  <img src="./images/slide1.png" data-src="./images/slide-1-full.png" width="210" height="297" alt="">
-                </div>
-                <p class="reviews__name">ООО «ТехноСфера»</p>
-              </li>
-              <li class="reviews__item swiper-slide" data-open-modal data-modal-id="#modal-reviews">
-                <div class="reviews__image">
-                  <img src="./images/slide2.png" data-src="./images/slide-2-full.png" width="210" height="297" alt="">
-                </div>
-                <p class="reviews__name">ООО «ТехноСфера»</p>
-              </li>
-              <li class="reviews__item swiper-slide" data-open-modal data-modal-id="#modal-reviews">
-                <div class="reviews__image">
-                  <img src="./images/slide1.png" data-src="./images/slide-1-full.png" width="210" height="297" alt="">
-                </div>
-                <p class="reviews__name">ООО «ТехноСфера»</p>
-              </li>
-              <li class="reviews__item swiper-slide" data-open-modal data-modal-id="#modal-reviews">
-                <div class="reviews__image">
-                  <img src="./images/slide2.png" data-src="./images/slide-2-full.png" width="210" height="297" alt="">
-                </div>
-                <p class="reviews__name">ООО «ТехноСфера»</p>
-              </li>
-              <li class="reviews__item swiper-slide" data-open-modal data-modal-id="#modal-reviews">
-                <div class="reviews__image">
-                  <img src="./images/slide1.png" data-src="./images/slide-1-full.png" width="210" height="297" alt="">
-                </div>
-                <p class="reviews__name">ООО «ТехноСфера»</p>
-              </li>
-              <li class="reviews__item swiper-slide" data-open-modal data-modal-id="#modal-reviews">
-                <div class="reviews__image">
-                  <img src="./images/slide2.png" data-src="./images/slide-2-full.png" width="210" height="297" alt="">
-                </div>
-                <p class="reviews__name">ООО «ТехноСфера»</p>
+                <p class="reviews__name">S-Cats</p>
               </li>
             </ul>
             <div class="swiper-nav-buttons">
@@ -847,14 +830,16 @@
           </div>
           <nav class="footer__nav">
             <div class="footer__nav-wrapper">
-              <p class="footer__nav-title">Контакты</p>
-              <a class="footer__link" href="tel:+79107925720">+7 (910) 792-57-20</a>
+              <p class="footer__nav-title footer__nav-title--desk">Контакты</p>
+              <p class="footer__nav-title footer__nav-title--mob">Телефон</p>
+              <a class="footer__link" href="tel:+79955925720">+7 (995) 592-57-20</a>
+              <p class="footer__nav-title footer__nav-title--mob footer__nav-title--email">Почта</p>
               <a class="footer__link" href="mailto:support@eazzy.pro">support@eazzy.pro</a>
               <a class="footer__link" href="https://t.me/eazzypro?direct" target="_blank">Написать в telegram</a>
               <div class="footer__nav-socials">
                 <ul class="footer__socials-list list-reset">
                   <li class="footer__socials-item">
-                    <a href="https://t.me/eazzypro">
+                    <a href="https://t.me/eazzypro" title="Перейти в ТГ-канал">
                       <svg width="24" height="24" fill="currentColor">
                         <use xlink:href="./icons/stack.svg#tg-footer"></use>
                       </svg>
@@ -865,9 +850,9 @@
             </div>
             <div class="footer__nav-wrapper">
               <p class="footer__nav-title">Навигация</p>
-              <a class="footer__link" href="/#about">Что умеем</a>
-              <a class="footer__link" href="/parents.html">Родителям</a>
-              <a class="footer__link" href="/education.html">Образованию</a>
+              <a class="footer__link" href="/#scopes">Что умеем</a>
+              <a class="footer__link" href="/parents.html" target="_blank">Родителям</a>
+              <a class="footer__link" href="/education.html" target="_blank">Образованию</a>
               <a class="footer__link" href="/#business">Бизнесу</a>
             </div>
             <div class="footer__nav-wrapper">
@@ -951,8 +936,6 @@
       </div>
     </div>
   </div>
-
-
 
   <div class="cookies">
     <div class="cookies__content">

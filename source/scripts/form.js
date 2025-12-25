@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable no-alert */
-const url = 'https://e41abda2826294b6.mokky.dev/formdata';
+const url = 'https://dev-api.eazzy.pro/api/v1/user/answers-to-questions';
 
 function showSuccessModal() {
   document.querySelector('#modal-success').classList.add('is-active');

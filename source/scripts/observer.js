@@ -1,16 +1,26 @@
 const observers = new Map();
 
-function initObserver(element, classname, start) {
+function initObserver(element, classname, callback) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add(classname);
-        if (entry.target.classList.contains('bubbles')) {
-          start();
+
+        if (callback && typeof callback === 'function') {
+          callback();
           observer.unobserve(element);
+        }
+
+        if (entry.target.classList.contains('bubbles')) {
+          if (callback && typeof callback === 'function') {
+            callback();
+            observer.unobserve(element);
+          }
         }
       }
     });
+  }, {
+    threshold: 0.1
   });
 
   observer.observe(element);

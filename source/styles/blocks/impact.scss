@@ -1,6 +1,10 @@
 .impact {
   background: linear-gradient(180deg, #f0efff 0%, #adacfa 100%);
-  padding-top: 60px;
+  padding-top: 40px;
+
+  @include vp-960 {
+    padding-top: 60px;
+  }
 
   .container {
     background-image:
@@ -8,34 +12,65 @@
         url("../../images/impact-bg@2x.webp") 2x type("image/webp"),
         url("../../images/impact-bg@1x.png") 1x type("image/png"),
         url("../../images/impact-bg@2x.png") 2x type("image/png"));
+    background-size: 375px;
+    background-position: 50% 130px;
     background-repeat: no-repeat;
-    background-position: 100% 100%;
+
+    @include vp-640 {
+      background-position: 100% 50%;
+      background-size: 50vw;
+    }
+
+    @include vp-1200 {
+      background-size: 694px 674px;
+      background-position: 100% 100%;
+    }
   }
 }
 
 .impact__content {
-  padding-bottom: 66px;
+  padding-bottom: 40px;
+
+  @include vp-640 {
+    padding-bottom: 66px;
+  }
 }
 
 .impact__title {
-  @include font($ff-inter, 600, 42px, 1.4);
+  @include font($ff-inter, 600, 32px, 1.4);
   color: #1c1c1c;
   margin-bottom: 12px;
+  text-align: center;
+
+  @include vp-640 {
+    font-size: 42px;
+    text-align: left;
+  }
 }
 
 .impact__subtitle {
   @include font($ff-inter, 400, 16px, 1.25);
   color: rgba(28, 28, 28, 0.8);
-  margin-bottom: 40px;
-  max-width: 490px;
+  text-align: center;
+  margin-bottom: 390px;
+
+  @include vp-640 {
+    max-width: 490px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
 }
 
 .impact__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
-  max-width: 520px;
   margin-bottom: 40px;
+
+  @include vp-640 {
+    grid-template-columns: repeat(2, 1fr);
+    width: 50vw;
+    max-width: 520px;
+  }
 }
 
 .impact__item {
@@ -60,4 +95,9 @@
 
 .impact__link {
   width: 298px;
+  margin: 0 auto;
+
+  @include vp-640 {
+    margin: 0;
+  }
 }

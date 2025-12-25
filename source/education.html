@@ -19,7 +19,7 @@
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/styles.css?v=0.2">
 
   <link rel="preload" href="./fonts/Inter-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Inter-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -31,12 +31,12 @@
   <link rel="preload" href="./fonts/Inter-SemiBold.woff" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Inter-Bold.woff" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Atma-SemiBold.woff" type="font/woff" as="font" crossorigin="anonymous">
-  <script src="scripts/index.js" defer></script>
+  <script src="scripts/index.js?v=0.2" defer></script>
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header header--default">
       <div class="container">
         <div class="header__logo logo">
           <a href="/">
@@ -49,25 +49,25 @@
         <nav class="header__nav nav">
           <ul class="nav__list list-reset">
             <li class="nav__item">
-              <a href="/#about">Что умеем</a>
+              <a href="/#scopes">Что умеем</a>
             </li>
             <li class="nav__item">
               <a href="/#business">Бизнесу</a>
             </li>
             <li class="nav__item">
-              <a href="#performers">Исполнителю</a>
+              <a href="/#performers">Исполнителю</a>
             </li>
             <li class="nav__item">
-              <a href="#cases">Кейсы</a>
+              <a href="/#cases">Кейсы</a>
             </li>
             <li class="nav__item">
-              <a href="/parents.html">Родителям</a>
+              <a href="/parents.html" target="_blank">Родителям</a>
             </li>
             <li class="nav__item">
-              <a href="/education.html">Образованию</a>
+              <a href="/education.html" target="_blank">Образованию</a>
             </li>
             <li class="nav__item">
-              <a href="#contact">Связаться</a>
+              <a href="/#contact">Связаться</a>
             </li>
           </ul>
         </nav>
@@ -247,14 +247,16 @@
           </div>
           <nav class="footer__nav">
             <div class="footer__nav-wrapper">
-              <p class="footer__nav-title">Контакты</p>
-              <a class="footer__link" href="tel:+79107925720">+7 (910) 792-57-20</a>
+              <p class="footer__nav-title footer__nav-title--desk">Контакты</p>
+              <p class="footer__nav-title footer__nav-title--mob">Телефон</p>
+              <a class="footer__link" href="tel:+79955925720">+7 (995) 592-57-20</a>
+              <p class="footer__nav-title footer__nav-title--mob footer__nav-title--email">Почта</p>
               <a class="footer__link" href="mailto:support@eazzy.pro">support@eazzy.pro</a>
               <a class="footer__link" href="https://t.me/eazzypro?direct" target="_blank">Написать в telegram</a>
               <div class="footer__nav-socials">
                 <ul class="footer__socials-list list-reset">
                   <li class="footer__socials-item">
-                    <a href="https://t.me/eazzypro">
+                    <a href="https://t.me/eazzypro" title="Перейти в ТГ-канал">
                       <svg width="24" height="24" fill="currentColor">
                         <use xlink:href="./icons/stack.svg#tg-footer"></use>
                       </svg>
@@ -265,9 +267,9 @@
             </div>
             <div class="footer__nav-wrapper">
               <p class="footer__nav-title">Навигация</p>
-              <a class="footer__link" href="/#about">Что умеем</a>
-              <a class="footer__link" href="/parents.html">Родителям</a>
-              <a class="footer__link" href="/education.html">Образованию</a>
+              <a class="footer__link" href="/#scopes">Что умеем</a>
+              <a class="footer__link" href="/parents.html" target="_blank">Родителям</a>
+              <a class="footer__link" href="/education.html" target="_blank">Образованию</a>
               <a class="footer__link" href="/#business">Бизнесу</a>
             </div>
             <div class="footer__nav-wrapper">

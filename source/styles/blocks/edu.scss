@@ -1,42 +1,60 @@
 .edu {
   position: relative;
   background: $color-black-russian;
-  padding: 120px 0;
+  padding: 60px 0;
   z-index: 10;
+
+  @include vp-960 {
+    padding: 120px 0;
+  }
 }
 
 .edu__title {
-  @include font($ff-inter, 600, 42px, 1.23);
+  @include font($ff-inter, 600, 32px, 1.23);
   color: $color-default-white;
   margin-bottom: 8px;
   text-align: center;
   letter-spacing: 0.015em;
+
+  @include vp-960 {
+    font-size: 42px;
+  }
 }
 
 .edu__subtitle {
   @include font($ff-inter, 400, 16px, 1.25);
   color: $color-default-white;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   text-align: center;
   letter-spacing: 0.03em;
+
+  @include vp-960 {
+    margin-bottom: 60px;
+  }
 }
 
 .edu__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 40px;
   width: 100%;
   max-width: 974px;
   margin: 0 auto;
   margin-bottom: 61px;
+
+  @include vp-960 {
+    justify-content: space-between;
+  }
 }
 
 .edu__item {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0 26px;
-  max-width: 360px;
+
+  @include vp-960 {
+    max-width: 360px;
+  }
 }
 
 .edu__icon {
@@ -69,36 +87,58 @@
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   padding-top: 47px;
   border-top: 1px solid #95969c;
+
+  @include vp-960 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .edu__cta-title {
   @include font($ff-inter, 500, 32px, 1.19);
   letter-spacing: -0.02em;
   color: $color-default-white;
-  grid-column: 1 / 2;
   margin-bottom: 12px;
+  text-align: center;
+
+  @include vp-960 {
+    grid-column: 1 / 2;
+    text-align: left;
+  }
 }
 
 .edu__cta-text {
   @include font($ff-inter, 400, 19px, 1.37);
   letter-spacing: 0.015em;
   color: rgba(255, 255, 255, 0.7);
-  grid-column: 1 / 2;
+  margin-bottom: 40px;
+  text-align: center;
+
+  @include vp-960 {
+    margin: 0;
+    grid-column: 1 / 2;
+    text-align: left;
+  }
 }
 
 .edu__link {
   position: relative;
   width: 313px;
   height: 45px;
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
-  justify-self: end;
-  align-self: center;
-  margin-bottom: 5px;
+  margin: 0 auto;
+
+  @include vp-960 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    justify-self: end;
+    align-self: center;
+    margin: 0;
+    margin-bottom: 5px;
+  }
 
   &::after {
     position: absolute;
@@ -115,7 +155,7 @@
 
 @keyframes scale {
   0% {
-    transform: scale(1);
+    transform: scale(0.8);
   }
 
   50% {
@@ -123,7 +163,7 @@
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(0.8);
   }
 
 }

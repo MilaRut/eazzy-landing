@@ -1,5 +1,5 @@
 .legal {
-  padding: 80px;
+  padding: 20px;
   background-image:
     image-set(url("../../images/legal-bg@1x.webp") 1x type("image/webp"),
       url("../../images/legal-bg@2x.webp") 2x type("image/webp"),
@@ -9,23 +9,38 @@
   background-size: 1452px 414px;
   background-repeat: repeat;
 
+  @include vp-960 {
+    padding: 80px;
+  }
+
   .container {
     border-radius: 20px;
-    padding: 40px 54px;
+    padding: 20px;
     box-shadow: 0 10px 22px 0 rgba(173, 168, 194, 0.21), 0 40px 40px 0 rgba(173, 168, 194, 0.18), 0 89px 53px 0 rgba(173, 168, 194, 0.11), 0 158px 63px 0 rgba(173, 168, 194, 0.03), 0 248px 69px 0 rgba(173, 168, 194, 0);
     background: $color-default-white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
+
+    @include vp-960 {
+      gap: 24px;
+      padding: 40px 54px;
+    }
   }
 }
 
 .legal__bank-details {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
+
+  @include vp-960 {
+    flex-direction: row;
+    gap: 24px;
+  }
 }
 
 .legal__bank-details-item {
@@ -35,9 +50,13 @@
 
 .legal__contact,
 .legal__contact a {
-  @include font($ff-inter, 500, 48px, 1.2);
+  @include font($ff-inter, 500, 28px, 1.2);
   color: $color-default-black;
   position: relative;
+
+  @include vp-960 {
+    font-size: 48px;
+  }
 }
 
 .legal__contact a {
@@ -50,12 +69,16 @@
 
 .legal__copy {
   position: absolute;
-  top: 10px;
+  top: 0;
   right: -40px;
   background: transparent;
   border: none;
   cursor: pointer;
   transition: opacity $trans-default;
+
+  @include vp-960 {
+    top: 10px;
+  }
 
   @include hover-focus {
     opacity: 0.7;
@@ -87,14 +110,19 @@
     color: $color-default-white;
     content: "Email скопирован";
     top: -30px;
-    right: 50%;
-    translate: 50% 0;
+    right: 0;
+    transform: translate(0, 0);
     align-items: center;
     justify-content: center;
     width: 150px;
     height: 25px;
     padding: 5px;
     border-radius: 5px;
+
+    @include vp-960 {
+      right: 50%;
+      transform: translate(50%, 0);
+    }
   }
 
   &.is-active {
