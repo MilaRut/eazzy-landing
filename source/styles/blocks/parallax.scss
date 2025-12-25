@@ -1,39 +1,84 @@
 .parallax {
   position: absolute;
-  inset: 0 0 0 50%;
-  max-width: 587px;
+  inset: 0 0 0 0;
+  pointer-events: none;
+
+  @include vp-960 {
+    inset: 0 0 0 50%;
+    max-width: 587px;
+  }
 
   img {
     position: absolute;
+    scale: 0.5;
+    opacity: 0.8;
+
+    @include vp-960 {
+      scale: 1;
+      opacity: 1;
+    }
   }
 
   img:nth-child(1) {
-    top: 48px;
-    right: 76%;
+    top: -22px;
+    left: -50px;
+
+    @include vp-960 {
+      left: auto;
+      right: 76%;
+    }
   }
 
   img:nth-child(2) {
     top: 72px;
-    right: 10.2%;
+    right: -60px;
+
+    @include vp-960 {
+      right: 10.2%;
+    }
   }
 
   img:nth-child(3) {
-    top: 329px;
-    right: 96.7%;
+    top: 200px;
+    left: -80px;
+
+    @include vp-960 {
+      top: 329px;
+      left: auto;
+      right: 96.7%;
+    }
   }
 
   img:nth-child(4) {
-    top: 316px;
-    right: 5.9%;
+    top: 296px;
+    right: -70px;
+
+    @include vp-960 {
+      top: 316px;
+      right: 5.9%;
+    }
   }
 
   img:nth-child(5) {
-    top: 493px;
-    right: 83%;
+    bottom: -77px;
+    left: -30px;
+
+    @include vp-960 {
+      top: 493px;
+      bottom: auto;
+      left: auto;
+      right: 83%;
+    }
   }
 
   img:nth-child(6) {
-    top: 570px;
-    right: 27.6%;
+    bottom: -20px;
+    right: -40px;
+
+    @include vp-960 {
+      top: 570px;
+      bottom: auto;
+      right: 27.6%;
+    }
   }
 }

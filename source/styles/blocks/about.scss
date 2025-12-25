@@ -103,7 +103,7 @@
 }
 
 .about__subitem {
-  @include font($ff-inter, 400, 15px, 1.5);
+  @include font($ff-inter, 400, 14px, 1.5);
   text-align: center;
   margin-bottom: 4px;
 
@@ -113,7 +113,7 @@
 }
 
 .about__link {
-  @include font($ff-inter, 500, 16px, 1);
+  @include font($ff-inter, 500, 15px, 1);
   text-transform: uppercase;
   text-align: center;
   color: $color-black-russian;
@@ -127,6 +127,10 @@
   background: $color-default-white;
   padding: 18px 28px;
   transition: opacity $trans-default;
+
+  @include vp-960 {
+    font-size: 16px;
+  }
 
   @include hover-focus {
     opacity: 0.7;

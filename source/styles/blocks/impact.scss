@@ -74,10 +74,14 @@
 }
 
 .impact__item {
-  padding: 13px 23px;
+  padding: 13px 16px;
   box-shadow: 0 17px 37px 0 rgba(173, 172, 210, 0.1), 0 67px 67px 0 rgba(173, 172, 210, 0.09), 0 151px 91px 0 rgba(173, 172, 210, 0.05), 0 268px 107px 0 rgba(173, 172, 210, 0.01), 0 419px 117px 0 rgba(173, 172, 210, 0);
   background: $color-default-white;
   border-radius: 10px;
+
+  @include vp-960 {
+    padding: 13px 10px;
+  }
 }
 
 .impact__item-title {
@@ -94,7 +98,7 @@
 }
 
 .impact__link {
-  width: 298px;
+  width: 314px;
   margin: 0 auto;
 
   @include vp-640 {

@@ -125,10 +125,14 @@
 .to-top-btn {
   width: 40px;
   height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   border: none;
   border-radius: 50%;
   background: rgba(94, 19, 255, 0.5);
+  padding: 0;
   transition: transform $trans-default;
 
   svg {

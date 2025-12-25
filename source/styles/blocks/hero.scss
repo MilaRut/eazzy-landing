@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding-top: 89px;
+  padding-top: 60px;
   background:
     radial-gradient(circle at -20% -20%,
       rgba(255, 255, 255, 0.05) 0%,
@@ -19,34 +19,54 @@
       transparent 100%),
     linear-gradient(18deg, #070828 0%, #0e0936 25%, #1f0b55 50%, #340892 75%, #5b13f5 100%);
 
+  @include vp-960 {
+    padding-top: 89px;
+  }
+
   &::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 79px;
-    background-image:
-      image-set(url("../../images/wave@1x.webp") 1x type("image/webp"),
-        url("../../images/wave@2x.webp") 2x type("image/webp"),
-        url("../../images/wave@1x.png") 1x type("image/png"),
-        url("../../images/wave@2x.png") 2x type("image/png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include vp-960 {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 79px;
+      background-image:
+        image-set(url("../../images/wave@1x.webp") 1x type("image/webp"),
+          url("../../images/wave@2x.webp") 2x type("image/webp"),
+          url("../../images/wave@1x.png") 1x type("image/png"),
+          url("../../images/wave@2x.png") 2x type("image/png"));
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
   }
 
   .container {
     max-width: 1174px;
-    padding-top: 94px;
-    padding-bottom: 200px;
+    padding-top: 30px;
+    padding-bottom: 40px;
     background-image:
-      image-set(url("../../images/hero-bg@1x.webp") 1x type("image/webp"),
-        url("../../images/performers-bg@2x.webp") 2x type("image/webp"),
-        url("../../images/performers-bg@1x.png") 1x type("image/png"),
-        url("../../images/performers-bg@2x.png") 2x type("image/png"));
+      image-set(url("../../images/mask@1x.webp") 1x type("image/webp"),
+        url("../../images/mask@2x.webp") 2x type("image/webp"),
+        url("../../images/mask@1x.png") 1x type("image/png"),
+        url("../../images/mask@2x.png") 2x type("image/png"));
     background-repeat: no-repeat;
-    background-position: 96.6% 47.4%;
+    background-size: 420px 374px;
+    background-position: 50% 100%;
+
+    @include vp-960 {
+      padding-top: 94px;
+      padding-bottom: 200px;
+      background-image:
+        image-set(url("../../images/hero-bg@1x.webp") 1x type("image/webp"),
+          url("../../images/hero-bg@2x.webp") 2x type("image/webp"),
+          url("../../images/hero-bg@1x.png") 1x type("image/png"),
+          url("../../images/hero-bg@2x.png") 2x type("image/png"));
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 96.6% 47.4%;
+    }
   }
 }
 
@@ -55,22 +75,39 @@
   letter-spacing: -0.03em;
   color: rgba(255, 255, 255, 0.65);
   border-radius: 12px;
-  padding: 0px 24px;
+  padding: 0px 20px;
   height: 29px;
   background: rgba(255, 255, 255, 0.2);
   width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
+  margin: 0 auto 44px;
+  position: relative;
+  z-index: 10;
+  white-space: nowrap;
+
+  @include vp-960 {
+    padding: 0px 24px;
+    margin: 0;
+    margin-bottom: 14px;
+  }
 }
 
 .hero__title {
-  @include font($ff-inter, 600, 54px, 1.1);
+  @include font($ff-inter, 600, 38px, 1.1);
   letter-spacing: -0.015em;
   color: $color-default-white;
   margin-bottom: 20px;
-  max-width: 500px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+
+  @include vp-960 {
+    font-size: 54px;
+    text-align: left;
+    max-width: 500px;
+  }
 
   span {
     font-family: $ff-atma;
@@ -81,10 +118,19 @@
 }
 
 .hero__subtitle {
-  @include font($ff-inter, 400, 22px, 1.13);
+  @include font($ff-inter, 400, 16px, 1.13);
   letter-spacing: -0.01em;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 8px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+
+  @include vp-960 {
+    font-size: 22px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.65);
+  }
 }
 
 .hero__link {
@@ -99,9 +145,18 @@
   border-radius: 7px;
   height: 54px;
   width: 237px;
-  margin-top: 40px;
-  margin-bottom: 53px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   transition: opacity $trans-default;
+  position: relative;
+  z-index: 10;
+
+  @include vp-960 {
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 53px;
+  }
 
   @include hover-focus {
     opacity: 0.7;
@@ -109,16 +164,27 @@
 }
 
 .hero__contacts {
-  @include font($ff-inter, 400, 22px, 1.13);
+  @include font($ff-inter, 400, 16px, 1.13);
   letter-spacing: -0.01em;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 12px;
+  text-align: center;
+
+  @include vp-960 {
+    font-size: 22px;
+    text-align: left;
+  }
 }
 
 .hero__socials-list {
   display: flex;
   align-items: center;
   gap: 12px;
+  justify-content: center;
+
+  @include vp-960 {
+    justify-content: flex-start;
+  }
 }
 
 .hero__socials-item {
@@ -136,5 +202,4 @@
     width: 32px;
     height: 32px;
   }
-
 }

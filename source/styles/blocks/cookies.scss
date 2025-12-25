@@ -15,10 +15,15 @@
 .cookies__content {
   align-items: center;
   display: flex;
+  flex-direction: column;
   gap: 20px;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1200px;
+
+  @include vp-960 {
+    flex-direction: row;
+  }
 
   a,
   p {
