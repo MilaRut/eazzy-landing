@@ -6,7 +6,7 @@ function animateNumbers() {
   numberElements.forEach((el) => {
     const targetValue = parseInt(el.dataset.n, 10);
     const currentValue = parseInt(el.textContent, 10) || 0;
-    const duration = 1000;
+    const duration = 1500;
     let startTime = null;
 
     if (currentValue === targetValue) {

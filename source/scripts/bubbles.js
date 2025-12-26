@@ -27,9 +27,9 @@ export function startBubblesAnimation() {
   void animationElem.offsetHeight;
 
   bubbles.forEach((el, index) => {
-    const duration = 1200 + Math.random() * 700;
+    const duration = 1200 + Math.random() * 3000;
 
-    const delay = index * 30 + Math.random() * 100;
+    const delay = index * 30 + Math.random() * 500;
 
     const easings = [
       'cubic-bezier(0.34, 1.56, 0.64, 1)',
