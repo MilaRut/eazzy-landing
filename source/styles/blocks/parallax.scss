@@ -24,6 +24,7 @@
     left: -50px;
 
     @include vp-960 {
+      top: 138px;
       left: auto;
       right: 76%;
     }
@@ -34,6 +35,7 @@
     right: -60px;
 
     @include vp-960 {
+      top: 161px;
       right: 10.2%;
     }
   }
@@ -43,7 +45,7 @@
     left: -80px;
 
     @include vp-960 {
-      top: 329px;
+      top: 418px;
       left: auto;
       right: 96.7%;
     }
@@ -54,7 +56,7 @@
     right: -70px;
 
     @include vp-960 {
-      top: 316px;
+      top: 405px;
       right: 5.9%;
     }
   }
@@ -64,7 +66,7 @@
     left: -30px;
 
     @include vp-960 {
-      top: 493px;
+      top: 582px;
       bottom: auto;
       left: auto;
       right: 83%;
@@ -76,7 +78,7 @@
     right: -40px;
 
     @include vp-960 {
-      top: 570px;
+      top: 659px;
       bottom: auto;
       right: 27.6%;
     }
